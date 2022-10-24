@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MyDictionary.Models;
+using MyDictionary.Services.DictionaryApiService;
 using System.Diagnostics;
 
 namespace MyDictionary.Controllers
@@ -21,6 +22,14 @@ namespace MyDictionary.Controllers
         public IActionResult Privacy()
         {
             return View();
+        }
+
+        public IActionResult WordResults(string word)
+        {
+         var dictionaryApi = new DictionaryApi();
+         var wordModels = dictionaryApi.GetWordInfo(word);
+
+            return View(wordModels);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
