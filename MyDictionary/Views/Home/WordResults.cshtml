@@ -1,13 +1,66 @@
 ﻿@model List<WordInfoModel>
 
-@foreach(var item in Model)
-{
-    <div>@item.Word</div>
-    <div>@item.PartOfSpeech</div>
-    <div>@item.Definition</div>
-    <div>@item.Examples</div>
-    <div>@item.Synonyms</div>
+<head><link rel="stylesheet" href="site.css" /></head>
+
+<body class="pg2">
+
+    <div class="wordblock">
+
+
+        <div id="word">@Model[0].Word</div>
+        <div id="pronounciation">[@Model[0].Pronounciation]</div>
+        <br/>     
+        
+            
+    
+        @foreach(var item in Model)
+        {
+
+            <div class="loop">
+                <div id="partofspeech">@item.PartOfSpeech</div>
+                <div id="definition"> <ol><li>@item.Definition</li></ol></div>  
+                <br/>
+
+                <div id="examples">Examples</div>
+                @if(@item.Examples != null)
+                {
+                    @foreach(var ex in @item.Examples)
+                    {
+                        <div id="ex">@ex</div>
+                
+                    }
+                }
+                else
+                {
+                    <div></div>
+                }
+                <br/>
+                
+                <div id="synonyms">Synonyms</div>
+                @if(@item.Synonyms != null)
+                {
+                     @foreach(var syn in @item.Synonyms)
+                    {
+                        <div id="syn">@syn</div>
+                
+                    }
+                }
+                else
+                {
+                    <div></div>
+                }
+                <br/>
+                
+            </div>
+        }
+
+    </div>
+
+
+   
+    
+    
 
 
 
-}
+</body>

@@ -1,18 +1,104 @@
-html {
-  font-size: 14px;
+.pic{
+    text-align:center;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+#titlepic {
+    text-align: center;
+    padding: 20px;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+.search {
+    text-align: center;
+    margin: 50px 200px 0px 200px;
+    -webkit-border-radius: 25px;
 }
 
-body {
-  margin-bottom: 60px;
+#searchbar {
+    -webkit-border-radius: 25px;
+}
+
+#button {
+    -webkit-border-radius: 10px;
+    background-color: navy;
+    color: white;
+}
+
+/*Results Page*/
+
+.pg2 {
+    background-image: url('https://store-images.s-microsoft.com/image/apps.25331.9007199266246485.04d61f8b-f36e-423c-97c2-76b743fa68c4.dde8de2e-1f46-413a-87a4-db9de539f5fd?mode=scale&q=90&h=300&w=300');
+    background-repeat: repeat;
+    background-size:10%;
+}
+
+.wordblock{
+    margin: 0% 20% 0% 20%;
+    position:center;
+    text-align:center;
+    display:block;
+    block-size:fit-content;    
+    background-color:white;
+}
+
+#word{
+    text-align:left;
+    font-weight:700;
+    font-size:50px;
+    margin: 5px;
+    color:black;
+
+}
+
+#pronounciation{
+    text-align:left;
+    font-size:25px;
+    margin:5px;
+}
+
+.syl {
+    display:inline;
+    margin: 0px 0px 0px 10px;
+}
+
+#syl{
+   text-align:left;
+}
+
+#partofspeech{
+    font-style:italic;
+    text-align:left;
+    margin:0px 0px 0px 10px;
+}
+
+#examples {
+    text-align: left;
+    text-decoration: underline;
+    font-weight: 500;
+    margin: 0px 0px 0px 10px;
+}
+
+#ex {
+    text-align: left;
+    margin: 0px 0px 0px 10px;
+}
+
+#synonyms {
+    text-align: left;
+    text-decoration: underline;
+    font-weight: 500;
+    margin: 0px 0px 0px 10px;
+}
+
+#syn {
+    text-align: left;
+    margin: 0px 0px 0px 10px;
+}
+
+#definition{
+    text-align:left;
+    margin:0px 0px 0px 10px;
+}
+
+#loop{
+    /*display:none;*/
 }

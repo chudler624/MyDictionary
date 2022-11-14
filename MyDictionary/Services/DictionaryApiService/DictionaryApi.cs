@@ -31,20 +31,25 @@ namespace MyDictionary.Services.DictionaryApiService
                 
 
                 var wordModels = new List<WordInfoModel>();
-                
+                                
                 foreach (var item in wordInfo.results)
                 {
-                   
+
 
                     wordModels.Add(new WordInfoModel
                     {
                         Definition = item.definition,
                         PartOfSpeech = item.partOfSpeech,
                         Examples = item.examples,
-                        Word = wordInfo.word
+                        Word = wordInfo.word,
+                        Synonyms = item.synonyms,
+                        Pronounciation = wordInfo.pronunciation.all,
+                        
 
-                    });
 
+                    }); 
+                    
+                    
 
                 }
 
